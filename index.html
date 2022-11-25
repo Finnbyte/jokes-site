@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XD</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>I DUNNO</h1>
+            <hr>
+        </div>
+        <div class="stuff">
+            <div class="text">
+                <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Eget nunc lobortis mattis aliquam faucibus purus. Vulputate eu scelerisque felis imperdiet proin. Nullam eget felis eget nunc lobortis mattis aliquam. Porttitor lacus luctus accumsan tortor posuere ac ut consequat. Nunc sed id semper risus in. Eu volutpat odio facilisis mauris. Tempor id eu nisl nunc mi ipsum faucibus. Integer malesuada nunc vel risus commodo viverra. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Elit sed vulputate mi sit. Et molestie ac feugiat sed lectus. Id volutpat lacus laoreet non curabitur gravida arcu ac.</h3>
+            </div>
+            <div class="buttons">
+                <button id="nextBtn" onclick="getJoke('add')">Display next joke!</button>
+                <button id="earlierBtn" onclick="getJoke('earlier')">Display earlier joke!</button>
+                <button id="showDarkJokesBtn" onclick="jokes.toggleDarkJokes()">Receive dark jokes. <span>State: </span><span id="darkJokesState"></span></button>
+                <button id="historyClearBtn" onclick="jokes.clearHistory()">Clears history use with caution!</button>
+            </div>
+            <br><br><br>
+
+            <div class="jokeBox">
+                <p id="warning"></p>
+                <textarea id="textBox" readonly></textarea>
+
+            <div class="jokesInfo">
+                <hr>
+                <span>Your joke index is: <span id="indexCount"></span></span>
+                <p>This joke is of category: <span id="jokeType"></span></p>
+
+                <span id="copySuccesful"></span>
+                <button id="copyJoke" onclick="jokes.copyCurrentJoke()">Copy this joke to clipboard</button>
+                <br><br>
+
+                <h3>Categories:</h3>
+                <div class="categories">
+                    <input type="checkbox" id="programming" value="programming"><label for="programming"> Programming</label><br>
+                    <input type="checkbox" id="misc" value="misc"><label for="misc"> Misc.</label><br>
+                    <input type="checkbox" id="pun" value="pun"><label for="pun"> Pun</label><br>
+                    <input type="checkbox" id="spooky" value="spooky"><label for="spooky"> Spooky</label><br>
+                    <input type="checkbox" id="christmas" value="christmas"><label for="christmas"> Christmas</label><br>
+                    <br>
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="src/Jokes.js"></script>
+    <script src="src/utils.js"></script>
+    <script src="src/script.js"></script>
+</body>
+</html>
